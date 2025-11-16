@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Vendas — Sistema</title>
+  <link rel="stylesheet" href="CSS_Vendas.css" />
+  <!-- jsPDF para gerar PDF automaticamente -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+</head>
+<body>
+
+  <div class="container">
+    <!-- Carrinho -->
+
+
+
+    <section class="left">
+      <h2>Venda Actual</h2>
+
+      <div class="sale-header">
+        <div><strong>Código Cliente:</strong> <span id="clientCode">—</span></div>
+        <div><strong>Total:</strong> <span id="saleTotal">0.00</span></div>
+      </div>
+
+      <div class="sale-items">
+        <table id="saleTable">
+          <thead>
+            <tr>
+              <th>Produto</th>
+              <th>Qtd</th>
+              <th>Preço</th>
+              <th>Valor</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody id="saleTbody"></tbody>
+        </table>
+      </div>
+
+      <div class="sale-actions">
+        <button id="btnFacturar">Facturar</button>
+        <button id="btnNovaVenda">Nova Venda</button>
+        <button id="btnAnularVenda">Anular uma Venda</button>
+
+      </div>
+    </section>
+
+    <!-- Produtos -->
+    <section class="right">
+      <h2>Produtos</h2>
+      <div class="search-box">
+        <input id="searchProducts" placeholder="🔎 Pesquisar produto..." />
+      </div>
+
+      <div id="productList" class="product-list"></div>
+    </section>
+  </div>
+
+  <script type="module" src="JS_Vendas.js"></script>
+</body>
+</html>

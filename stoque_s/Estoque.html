@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cadastro de Produtos</title>
+  <link rel="stylesheet" href="CSS_Estoque.css">
+</head>
+<body>
+  <div class="container">
+    <div class="form-container">
+      <h2>Cadastro de Produto</h2>
+      <form id="productForm">
+        <!-- Código + Nome -->
+        <div class="linha-dupla">
+          <div class="field small">
+            <label for="codigo">Código</label>
+            <input type="text" id="codigo" readonly />
+          </div>
+          <div class="field large">
+            <label for="nome">Nome do Produto</label>
+            <input type="text" id="nome" required />
+          </div>
+        </div>
+
+        <!-- Descrição -->
+        <div class="field">
+          <label for="descricao">Descrição Detalhada</label>
+          <textarea id="descricao" rows="1"></textarea>
+        </div>
+
+        <!-- Validade + Fabrico + Unidade -->
+        <div class="linha-tripla">
+             <div class="field">
+            <label for="fabrico">Fabrico</label>
+            <input type="date" id="fabrico" />
+          </div>
+          <div class="field">
+            <label for="validade">Validade</label>
+            <input type="date" id="validade" />
+          </div>
+         
+          <div class="field">
+            <label for="unidade">Unidade de Venda</label>
+            <select id="unidade">
+              <option value="Quilograma">Quilograma</option>
+              <option value="Lata">Lata</option>
+              <option value="Garrafa">Garrafa</option>
+              <option value="Litro">Litro</option>
+              <option value="Saco">Saco</option>
+              <option value="Pacote">Pacote</option>
+              <option value="Caixa">Caixa</option>
+              <option value="Grama">Grama</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- Valor Compra + Quantidade + Preço Compra -->
+        <div class="linha-tripla">
+          <div class="field">
+            <label for="valorCompra">Valor da Compra</label>
+            <input type="number" step="0.01" id="valorCompra" />
+          </div>
+          <div class="field">
+            <label for="quantidade">Quantidade</label>
+            <input type="number" step="0.01" id="quantidade" />
+          </div>
+          <div class="field">
+            <label for="precoCompra">Preço de Compra</label>
+            <input type="number" step="0.01" id="precoCompra" readonly />
+          </div>
+        </div>
+
+        <!-- Preço Venda -->
+        <div class="field centro">
+          <label for="precoVenda">Preço de Venda</label>
+          <input type="number" step="0.01" id="precoVenda" />
+        </div>
+
+        <!-- Botão -->
+        <div class="submit-container">
+          <button type="submit">Gravar</button>
+        </div>
+      </form>
+    </div>
+
+   <div class="list-container">
+  <h2>Produtos Registrados</h2>
+
+  <!-- Campo de busca -->
+  <div class="search-box">
+    <input type="text" id="searchInput" placeholder="Pesquisar por nome ou preço de venda..." />
+  </div>
+
+  <!-- Cards dos produtos -->
+  <div id="productCards" class="horizontal-card-list"></div>
+</div>
+
+
+  <script type="module" src="JS_Estoque.js"></script>
+</body>
+</html>

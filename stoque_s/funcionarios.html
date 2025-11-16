@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <title>Sistema de Gestão</title>
+  <link rel="stylesheet" href="CSS_Funcionarios.css">
+</head>
+<body>
+
+
+
+    <header>
+    <h1>Cadastro de Funcionários</h1>
+  </header>
+
+  <main>
+
+   <section class="form-section">
+    <form id="cadastroForm">
+      <label>Nome completo:</label>
+      <input type="text" id="nome" required />
+
+      <label>Data de nascimento:</label>
+      <input type="date" id="nascimento" required />
+
+      <label>Local de Residência:</label>
+      <input type="text" id="residencia" required />
+
+      <label>Número de telefone:</label>
+      <input type="text" id="telefone" required />
+
+      <label>Grau académico:</label>
+      <select id="grau" required>
+        <option value="Ensino Básico">Ensino Básico</option>
+        <option value="Ensino Médio">Ensino Médio</option>
+        <option value="Licenciatura">Licenciatura</option>
+      </select>
+
+      <label>Função:</label>
+      <input type="text" id="funcao" required />
+
+     <button type="submit">Cadastrar</button>
+          
+    </form>
+    </section>
+
+
+     <section class="list-section">
+      <div id="iconeVisualizacao" class="titulo-icone" style="display: none;">
+        <i class="fas fa-eye fa-2x"></i>
+    </div>
+      <ul id="listaPessoal"></ul>
+    </section>
+
+
+  </main>
+ 
+
+   <script type="module" src="JS_funcionarios.js"></script>
+
+</body>
+</html>

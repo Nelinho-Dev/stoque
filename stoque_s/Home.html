@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sistema de Gestão</title>
+
+  <link rel="stylesheet" href="CSS_Home.css">
+
+  <script src="https://www.gstatic.com/firebasejs/10.7.2/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.7.2/firebase-database.js"></script>
+  
+</head>
+
+
+<body>
+  <div class="container">
+   <aside class="sidebar">
+  <h2>Menu</h2>
+  <ul>
+    <li><a href="funcionarios.html" target="_blank" rel="noopener noreferrer">Funcionários</a></li>
+    <li><a href="Estoque.html"     target="_blank" rel="noopener noreferrer">Estoque</a></li>
+    <li><a href="Vendas.html"      target="_blank" rel="noopener noreferrer">Vendas</a></li>
+  </ul>
+</aside>
+
+
+     <div class="container_N">
+    <h1>Controle de Caixa</h1>
+
+    <div class="today-card" id="todayCard">
+      <h2>Saldo Disponível</h2>
+      <p><span id="saldoHoje">Carregando...</span></p>
+    </div>
+
+    <section class="previous-section">
+      <h2>Caixas Anteriores</h2>
+      <div class="list-cards" id="listaCaixas"></div>
+    </section>
+  </div>
+      
+    </main>
+
+
+    
+  </div>
+
+
+  
+
+
+  <script type="module" src="JS_Home.js"></script>
+</body>
+</html>
